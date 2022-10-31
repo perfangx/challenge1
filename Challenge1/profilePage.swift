@@ -83,7 +83,7 @@ struct profilePage: View {
                  //   }
                                     
                 
-                    .navigationTitle("Profile")
+                  //  .navigationTitle("Profile")
                     //**** END PAGE CONTENT HERE*****
                 }
                 .offset(y:-60)

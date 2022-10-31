@@ -9,7 +9,7 @@ import SwiftUI
 
 struct forgetPass: View {
     @State var email: String = ""
-
+    
     var body: some View {
         ZStack {
             VStack (spacing: 20) {
@@ -20,47 +20,52 @@ struct forgetPass: View {
                                                startPoint: .topLeading, endPoint: .bottomTrailing)
                     )
                 
-                VStack {
+                VStack(spacing:15) {
                     
-                    
-                    Color.white
-                        .ignoresSafeArea(edges: .all)
-                    
-                    
-                    VStack {
+//                    Label("lock", systemImage: "lock.circle")
+                    Image(systemName: "lock.circle")
+                        .foregroundColor(Color("Color"))
+                        .font(.system(size: 100))
+                    Text("Trouble logging in?")
+                        .foregroundColor(Color("Color"))
+                        .font(.system(size: 36))
                         
-                       
-                        VStack(spacing: 10) {
-                            TextField("Email", text: $email, prompt: Text("Enter email..."))
-                                .font(.title2)
-                                .textFieldStyle(.roundedBorder)
-                                .autocapitalization(.none)
-                            
-                        }
-                        .padding()
-                        .padding(.bottom, 8.0)
+                    
+
+                    Text("Enter your username or email and we’ll send you a link to get back into your account.")
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 12))
+                        .padding(20)
+                    
                         
-                        VStack(spacing: 16) {
                         
-                            Button {
-                                print("email: \(email)")
-                                
-                            } label: {
-                                Text("Reset password")
-                                    .frame(maxWidth: .infinity)
-                                    .font(.title2)
-                            }
+                        TextField("username or email" , text: $email)
                             .padding()
-                            .foregroundColor(.white)
-                            .background(.purple.opacity(0.9))
-                            .cornerRadius(16)
+                            .frame(width:307,height:44)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color("Color"), lineWidth: 1))
+                        
+                        
+                        Button {
+                            print("email: \(email)")
+                            
+                        } label: {
+                            Text("Reset password")
+                                .frame(width:307 , height:44 )
+                                .foregroundColor(.white)
+                                .background(Color("Color"))
+                                .cornerRadius(8)
+                            
                             
                         }
-                        .padding()
                         
-                        Spacer()
-                        
-                    }
+                   
+                    .padding()
+                    
+                    Spacer()
+                    
+                    
                     
                 }
                 

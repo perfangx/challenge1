@@ -22,7 +22,7 @@ struct startPage: View {
                     
                         .resizable()
                         .offset(y:-200)
-                        .frame(width:380, height:380,alignment: .center)
+                        .frame(width:300, height:300,alignment: .center)
                         .padding()
                     
                 }
@@ -74,15 +74,16 @@ struct startPage: View {
                                 .padding(.horizontal,20)
                             
                         }
-                        
-                        Button("Continue with Apple"){}
-                        
-                            .frame(width:307 , height:44 )
-                            .foregroundColor(.white)
-                            .background(Color(.lightGray))
-                            .background(.white)
-                            .cornerRadius(8)
-                        
+                        HStack{
+                            Button("Continue with Apple"){}
+                            Image(systemName: "apple.logo")
+                        }
+                        .frame(width:307 , height:44 )
+                        .foregroundColor(.white)
+                        .background(Color(.lightGray))
+                        .background(.white)
+                        .cornerRadius(8)
+                    
                         
                         HStack{
                             
@@ -96,9 +97,12 @@ struct startPage: View {
                     }
                     //.navigationTitle("Start page")
                     .navigationBarHidden(true)
+                    
                 
                 }
+            
             }
+        .accentColor(Color("Color"))
             }
 }
 

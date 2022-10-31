@@ -8,9 +8,6 @@
 import SwiftUI
 
 
-import SwiftUI
-
-
 //identifier for the users
 struct friend: Identifiable {
     let id = UUID()

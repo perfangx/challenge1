@@ -29,8 +29,7 @@ struct homePage: View {
                     
                                 Spacer()
                 }
-               
-                .navigationTitle("home page")
+             
                 .toolbar{
 
                     NavigationLink(destination: profilePage(CurrentUser: currentUser), label:{
@@ -40,7 +39,13 @@ struct homePage: View {
                 }
                
             }
-        }}
+            .navigationTitle("Scratch")
+           // .navigationBarTitle("Scratch", displayMode: .inline)
+            .font(.system(size: 20))
+        }
+        .accentColor(Color("Color"))
+        
+    }
 }
 
 struct homePage_Previews: PreviewProvider {
