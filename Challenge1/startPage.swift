@@ -26,13 +26,20 @@ struct startPage: View {
                         .padding()
                     
                 }
-                    VStack (spacing: 20) {
+                    VStack (spacing: 10) {
                         
                 //****START PAGE CONTENT HERE*****
-                        
-                        Text("You scratch my back and I'll scratch yours")
-                            .offset(y:-30)
-                            .padding(.top,350)
+  
+
+                            Text("\"You scratch my back and I’ll scratch yours\"")
+                                
+                                .fontWeight(.ultraLight)
+                                .font(.custom("Marker Felt", fixedSize: 19 ))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color("Color"))
+                                .offset(y:-50)
+                                .padding(.top,350)
+                      
                         
                         //first button link
                         NavigationLink(destination: loginPage(), label:{
@@ -89,7 +96,10 @@ struct startPage: View {
                         HStack{
                             
                             Text(" By signing up, you agree to our Terms, Privacy Policy, and Cookie Use.")
+                                .multilineTextAlignment(.center)
                                 .padding()
+                            
+                                .font(.system(size: 14))
                             
                             
                             

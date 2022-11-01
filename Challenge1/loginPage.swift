@@ -30,7 +30,7 @@ struct loginPage: View {
                 VStack(spacing:15)
                 {
                     
-                    Image("Image")
+                    Image("image")
                         .resizable()
                         .offset(y:-10)
                         .frame(width:230, height:164)
@@ -80,8 +80,14 @@ struct loginPage: View {
                             homePage(CurrentUser: currentUser)
                         }
                     NavigationLink(destination:         forgetPass(), label:{
-                        Text("Forget password?")
-                            .bold()
+                        Text("Forgot password?")
+                            .font(.system(size: 14))
+                            .padding()
+                    })
+                    
+                    NavigationLink(destination:         signupPage(), label:{
+                        Text("Dont have an account? Create one")
+                            .font(.system(size: 14))
                             .padding()
                     })
                     //**** END PAGE CONTENT HERE*****

@@ -32,7 +32,7 @@ struct signupPage: View {
                 
                 VStack(spacing:15){
                     
-                    Image("Image")
+                    Image("image")
                     
                         .resizable()
                         .offset(y:-10)
