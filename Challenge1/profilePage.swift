@@ -107,7 +107,6 @@ struct profilePage: View {
         var body: some View{
             switch selectedSide{
             case .Myscratch:
-                HeroImageView(heroName: "anakin")
                 
                 List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
                     Button(role: .destructive){
@@ -120,7 +119,7 @@ struct profilePage: View {
                 
 
             case .Friends:
-                HeroImageView(heroName: "anakin")
+               
                 VStack {
                     
                     VStack() {
@@ -182,19 +181,6 @@ struct profilePage: View {
 }
 
     
-    struct  HeroImageView: View{
-        var heroName: String
-        var body: some View{
-            Image("profail")
-            //                .resizable()
-            //                .frame(width: 250, height: 400)
-            //                .shadow(radius: <#T##CGFloat#>)
-            
-            
-            
-        }
-        
-    }
     
     
     struct friendRow1: View {

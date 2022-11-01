@@ -39,8 +39,8 @@ struct homePage: View {
                 }
                
             }
-            .navigationTitle("Scratch")
-           // .navigationBarTitle("Scratch", displayMode: .inline)
+            //.navigationTitle("Scratch")
+            .navigationBarTitle("Scratch", displayMode: .inline)
             .font(.system(size: 20))
         }
         .accentColor(Color("Color"))

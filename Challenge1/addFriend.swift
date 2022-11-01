@@ -72,7 +72,7 @@ struct friendRow: View {
             Spacer()
             Button("Add") {}
                 .buttonStyle(.borderedProminent)
-            Button("") {}
+            
         }
     }
 }
