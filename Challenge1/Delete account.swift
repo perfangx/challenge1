@@ -23,13 +23,15 @@ struct Delete_account: View {
                     
                     VStack {
                         
-                        
-                        Text("We will miss you :(")
-                            .font(.title)
-                        
                         Spacer()
+                        Text("We will miss you :(")
+                            .foregroundColor(Color("Color"))
+                            .font(.system(size: 24))
+                            .padding()
                         Text("Are you sure you want to Delete you account?")
-                            .fontWeight(.bold)
+                            .foregroundColor(Color("Color"))
+                            .font(.system(size: 18))
+                            
                     
                         HStack {
                             
@@ -38,7 +40,7 @@ struct Delete_account: View {
                             
                             .foregroundColor(.white)
                             .frame(width: 150 ,height: 50)
-                            .background(Color.red.opacity(0.8))
+                            .background(Color.gray.opacity(0.9))
                             .opacity(0.9)
                             .cornerRadius(10)
                             .border(Color(.clear))
@@ -50,7 +52,7 @@ struct Delete_account: View {
                             }
                             .foregroundColor(.white)
                             .frame(width: 150 ,height: 50)
-                            .background(Color.green.opacity(0.8))
+                            .background(Color.red.opacity(0.9))
                             .opacity(0.9)
                             .cornerRadius(10)
                             .border(Color(.clear))
