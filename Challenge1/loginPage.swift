@@ -30,7 +30,7 @@ struct loginPage: View {
                 VStack(spacing:15)
                 {
                     
-                    Image("image")
+                    Image("Image")
                         .resizable()
                         .offset(y:-10)
                         .frame(width:230, height:164)
