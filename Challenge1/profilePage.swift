@@ -13,6 +13,7 @@ struct profilePage: View {
     
     var body: some View {
         ZStack {
+            
             VStack {
                 Rectangle()
                     .fill(Color.clear)
@@ -63,8 +64,6 @@ struct profilePage: View {
                     Text(CurrentUser.bio)
 
                        
-                    //
-                    //NavigationView(){
                         VStack{
                             Picker("choose a side ", selection: $selectedSide){
                                 ForEach(SideOfThForce.allCases, id: \.self){
@@ -74,20 +73,13 @@ struct profilePage: View {
                             .pickerStyle(SegmentedPickerStyle())
                             .padding()
                             
-
                             ChosenHeroView(selectedSide: selectedSide)
-                           
+                            
                         }
                     
-                        
-                        
-                 //   }
-                                    
                 
-                  //  .navigationTitle("Profile")
-                    //**** END PAGE CONTENT HERE*****
                 }
-                .offset(y:-60)
+//                .offset(y:-60)
             
             }
             
@@ -103,79 +95,142 @@ struct profilePage: View {
     
     struct ChosenHeroView: View {
         
+        @State var searchText: String = ""
         var selectedSide: SideOfThForce
+        
+        let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
         
         var body: some View{
             switch selectedSide{
-            case .Myscratch:
                 
-                List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
-                    Button(role: .destructive){
-                    } label: {
-                        Label("Delete", systemImage: "trash.circle")
+                // **** CASE 1 : MY SCRATCH ****
+            case .Myscratch:
+                VStack(spacing: 10){
+                    Text("my scratch")
+                        .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                        .padding(.leading)
+                        .font(.title3)
+                        .foregroundColor(Color("Color"))
+                    Rectangle()
+                        .fill(Color("Color"))
+                        .frame(height:1)
+                        .padding(.horizontal,20)
+                    Spacer()
+                    
+                    List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
+                        Button(role: .destructive){
+                        } label: {
+                            Label("Delete", systemImage: "trash.circle")
+                        }
+                    }
                     }
                 }
-                }
                 
+                // **** CASE 2 : FRIENDS ****
                 
-
             case .Friends:
-               
-                VStack {
-                    
-                    VStack() {
-
-                        Text("Freinds Request")
-                            .fontWeight(.light)
-
-                        HStack{
+                VStack{
+                    ScrollView(.vertical){
+                    VStack (spacing: 10) {
+                        
+                        Text("Friend Request")
+                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                            .padding(.leading)
+                            .font(.title3)
+                            .foregroundColor(Color("Color"))
+                        Rectangle()
+                            .fill(Color("Color"))
+                            .frame(height:1 )
+                            .padding(.horizontal,20)
+                        
+                       // *** friend rec ***
+                        
+                        HStack {
                             Image("profilePic")
                                 .resizable()
-                                .scaledToFit()
                                 .clipShape(Circle())
-                                .frame(width: 68 ,height: 68)
+                                .frame(width: 65, height: 65)
                                 .cornerRadius(8)
-                                .offset(y:2)
-                                .padding()
-
-                            VStack(alignment: .leading, spacing: 2){
+                            VStack(alignment: .leading) {
                                 Text("Lubosek")
-                                    .font(.title2)
-                                    .foregroundColor(.purple)
-                                    .offset(y:2)
+                                    .font(.title3)
                                 Text("@Lubosek18")
                                     .font(.callout)
-                                    .foregroundColor(.blue)
-                                    .offset(y:2)
-
-
+                                    .foregroundColor(.gray)
                             }
-
+                            Spacer()
+                            Button("Reject") {}
+                                .buttonStyle(.bordered)
+                                .foregroundColor(Color("Color"))
+                            
+                            //  .background(Color.gray)
+                            
+                            
+                            Button("Accept") {}
+                                .buttonStyle(.borderedProminent)
+                            //  .background(Color("Color"))
+                                .foregroundColor(Color(.white))
                         }
+                       
+                      
+                        .padding(25)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color("Color"), lineWidth: 1)
+                                .frame(width:365,height:90)
+                               
+                        )
+            
+                        
+                        
+                        Text("Myfriend")
+                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                            .padding(.leading)
+                            .font(.title3)
+                            .foregroundColor(Color("Color"))
+                        Rectangle()
+                            .fill(Color("Color"))
+                            .frame(height:1 )
+                            .padding(.horizontal,20)
 
-                        .frame(width: 343, height: 81)
-                        .background(Color.red)
-                        .cornerRadius(17)
+                        HStack{
+                            
+                            HStack{
+                                Image(systemName: "magnifyingglass")
+                                TextField("Search", text: $searchText)
+                            }
+                            .padding(5)
+                            .background(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(Color(.white))
+                                    .shadow(radius: 2, x: 0, y: 0)
+                            )
+                            
+                            //add friend button
+                            NavigationLink(destination: addFriend(friendToadd: friendList), label:{
+                                Image(systemName: "person.crop.circle.badge.plus")
+                                    .bold()
+                                    .font(.system(size: 25))
+                                
+                            })
+                            
+                        }
                         .padding()
                     }
-                    
-                    
-                    
-                    Spacer()
+                    ScrollView(.vertical){
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            ForEach(friendList) { friend in friendRow1(eachFriend: friend)
+                            }
+                            }
+                        }
+                    }
                 }
-                //add friend button
-                NavigationLink(destination: addFriend(friendToadd: friendList), label:{
-                    Text("go add friends")
-                        .bold()
-                })
-                
-                List(friendList){
-                    friend in friendRow1(eachFriend: friend)
-                }
-
-                Spacer()
+           
             }
-            
         }
         
     }
@@ -233,9 +288,7 @@ struct profilePage: View {
                         .lineLimit(nil)
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 10)
-                    
-                    //                ReminderActions(reminder: reminder)
-                    //                    .foregroundColor(.gray)
+                 
                 }
             }
             

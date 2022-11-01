@@ -45,10 +45,28 @@ struct friendProfile: View {
                         Text("@Friend")
                         
                         Text("friend bio")
-                    }
-                            .offset(y:-60)
-                    Spacer()
                         
+                        Text("my scratch")
+                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                            .padding(.leading)
+                            .font(.title3)
+                            .foregroundColor(Color("Color"))
+                        Rectangle()
+                            .fill(Color("Color"))
+                            .frame(height:1)
+                            .padding(.horizontal,20)
+                        Spacer()
+                        
+                        List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder)
+                            
+                        }
+                        
+                    }
+                         
+                   
+        
+              
+                    
                 }
                 
             }

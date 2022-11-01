@@ -12,6 +12,7 @@
 		D41930AA2911011A00EDED94 /* Delete account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A92911011A00EDED94 /* Delete account.swift */; };
 		D41930AC2911014100EDED94 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930AB2911014100EDED94 /* SwiftUIView.swift */; };
 		D41930AE2911016800EDED94 /* forget password.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930AD2911016800EDED94 /* forget password.swift */; };
+		D41930B12911632200EDED94 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D41930B02911632200EDED94 /* BottomSheet */; };
 		D4548476290A923D00C3F5A3 /* Challenge1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548475290A923D00C3F5A3 /* Challenge1App.swift */; };
 		D4548478290A923D00C3F5A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548477290A923D00C3F5A3 /* ContentView.swift */; };
 		D454847A290A923D00C3F5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4548479290A923D00C3F5A3 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41930B12911632200EDED94 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +142,9 @@
 			dependencies = (
 			);
 			name = Challenge1;
+			packageProductDependencies = (
+				D41930B02911632200EDED94 /* BottomSheet */,
+			);
 			productName = Challenge1;
 			productReference = D4548472290A923D00C3F5A3 /* Challenge1.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +173,9 @@
 				Base,
 			);
 			mainGroup = D4548469290A923D00C3F5A3;
+			packageReferences = (
+				D41930AF2911632200EDED94 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = D4548473290A923D00C3F5A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,6 +423,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D41930AF2911632200EDED94 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamfootdev/BottomSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D41930B02911632200EDED94 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41930AF2911632200EDED94 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D454846A290A923D00C3F5A3 /* Project object */;
 }

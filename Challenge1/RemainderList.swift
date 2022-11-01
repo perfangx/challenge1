@@ -13,7 +13,7 @@ struct Reminder: Identifiable{
     let name : String
     let time : String
     let content : String
-    let numOfReact : Int
+    var numOfReact : Int
     let image:String
     let allReact = [String : Int]()
 }
