@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D419309C2910FEA600EDED94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309B2910FEA600EDED94 /* SplashScreen.swift */; };
+		D419309E2910FEC800EDED94 /* Delete account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309D2910FEC800EDED94 /* Delete account.swift */; };
+		D41930A02910FED600EDED94 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309F2910FED600EDED94 /* SwiftUIView.swift */; };
+		D41930A22910FEDF00EDED94 /* forget password.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A12910FEDF00EDED94 /* forget password.swift */; };
+		D41930A42910FEEF00EDED94 /* privacy policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A32910FEEF00EDED94 /* privacy policy.swift */; };
 		D4548476290A923D00C3F5A3 /* Challenge1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548475290A923D00C3F5A3 /* Challenge1App.swift */; };
 		D4548478290A923D00C3F5A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548477290A923D00C3F5A3 /* ContentView.swift */; };
 		D454847A290A923D00C3F5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4548479290A923D00C3F5A3 /* Assets.xcassets */; };
@@ -22,17 +27,17 @@
 		D45841FA290D8132009A6D3D /* RemainderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45841F9290D8132009A6D3D /* RemainderList.swift */; };
 		D45841FC290E7895009A6D3D /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45841FB290E7895009A6D3D /* user.swift */; };
 		D45841FE290E7F93009A6D3D /* forgetPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45841FD290E7F93009A6D3D /* forgetPass.swift */; };
-		D4584200290EAEC3009A6D3D /* forget password.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45841FF290EAEC3009A6D3D /* forget password.swift */; };
-		D4584202290EAEE5009A6D3D /* Delete account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4584201290EAEE5009A6D3D /* Delete account.swift */; };
-		D4584204290EAEF1009A6D3D /* privacy policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4584203290EAEF1009A6D3D /* privacy policy.swift */; };
-		D4584206290EAF0A009A6D3D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4584205290EAF0A009A6D3D /* SwiftUIView.swift */; };
 		D458420A290EB50B009A6D3D /* startPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4584209290EB50B009A6D3D /* startPage.swift */; };
-		D458420C290EB5D7009A6D3D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458420B290EB5D7009A6D3D /* SplashScreen.swift */; };
 		D458420E290EBC66009A6D3D /* remindersNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458420D290EBC66009A6D3D /* remindersNotification.swift */; };
 		D4D4DB09290FCF90006F3194 /* friendProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D4DB08290FCF90006F3194 /* friendProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D419309B2910FEA600EDED94 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		D419309D2910FEC800EDED94 /* Delete account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Delete account.swift"; sourceTree = "<group>"; };
+		D419309F2910FED600EDED94 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		D41930A12910FEDF00EDED94 /* forget password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "forget password.swift"; sourceTree = "<group>"; };
+		D41930A32910FEEF00EDED94 /* privacy policy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "privacy policy.swift"; sourceTree = "<group>"; };
 		D4548472290A923D00C3F5A3 /* Challenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4548475290A923D00C3F5A3 /* Challenge1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1App.swift; sourceTree = "<group>"; };
 		D4548477290A923D00C3F5A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,12 +54,7 @@
 		D45841F9290D8132009A6D3D /* RemainderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderList.swift; sourceTree = "<group>"; };
 		D45841FB290E7895009A6D3D /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		D45841FD290E7F93009A6D3D /* forgetPass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgetPass.swift; sourceTree = "<group>"; };
-		D45841FF290EAEC3009A6D3D /* forget password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "forget password.swift"; path = "../../../Downloads/Generalsetting/Generalsetting/forget password.swift"; sourceTree = "<group>"; };
-		D4584201290EAEE5009A6D3D /* Delete account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Delete account.swift"; path = "../../../Downloads/Generalsetting/Generalsetting/Delete account.swift"; sourceTree = "<group>"; };
-		D4584203290EAEF1009A6D3D /* privacy policy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "privacy policy.swift"; path = "../../../Downloads/Generalsetting/Generalsetting/privacy policy.swift"; sourceTree = "<group>"; };
-		D4584205290EAF0A009A6D3D /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = ../../../Downloads/Generalsetting/Generalsetting/SwiftUIView.swift; sourceTree = "<group>"; };
 		D4584209290EB50B009A6D3D /* startPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPage.swift; sourceTree = "<group>"; };
-		D458420B290EB5D7009A6D3D /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashScreen.swift; path = ../../../Downloads/SplashScreen.swift; sourceTree = "<group>"; };
 		D458420D290EBC66009A6D3D /* remindersNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = remindersNotification.swift; sourceTree = "<group>"; };
 		D4D4DB08290FCF90006F3194 /* friendProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,24 +90,24 @@
 			isa = PBXGroup;
 			children = (
 				D4548475290A923D00C3F5A3 /* Challenge1App.swift */,
+				D419309B2910FEA600EDED94 /* SplashScreen.swift */,
 				D4548477290A923D00C3F5A3 /* ContentView.swift */,
-				D458420B290EB5D7009A6D3D /* SplashScreen.swift */,
 				D4584209290EB50B009A6D3D /* startPage.swift */,
 				D4548483290A949800C3F5A3 /* loginPage.swift */,
+				D419309D2910FEC800EDED94 /* Delete account.swift */,
 				D4548485290A94E700C3F5A3 /* signupPage.swift */,
+				D41930A12910FEDF00EDED94 /* forget password.swift */,
+				D419309F2910FED600EDED94 /* SwiftUIView.swift */,
 				D45841FD290E7F93009A6D3D /* forgetPass.swift */,
+				D41930A32910FEEF00EDED94 /* privacy policy.swift */,
 				D454848D290C1E1000C3F5A3 /* settingsPage.swift */,
 				D454848B290C127D00C3F5A3 /* editProfile.swift */,
 				D454848F290C216000C3F5A3 /* addFriend.swift */,
 				D4548487290A97D800C3F5A3 /* homePage.swift */,
 				D4D4DB08290FCF90006F3194 /* friendProfile.swift */,
 				D4548489290AACC800C3F5A3 /* profilePage.swift */,
-				D4584203290EAEF1009A6D3D /* privacy policy.swift */,
 				D45841FB290E7895009A6D3D /* user.swift */,
-				D4584205290EAF0A009A6D3D /* SwiftUIView.swift */,
-				D4584201290EAEE5009A6D3D /* Delete account.swift */,
 				D45841F9290D8132009A6D3D /* RemainderList.swift */,
-				D45841FF290EAEC3009A6D3D /* forget password.swift */,
 				D45841F7290D665B009A6D3D /* FriendList.swift */,
 				D458420D290EBC66009A6D3D /* remindersNotification.swift */,
 				D4548479290A923D00C3F5A3 /* Assets.xcassets */,
@@ -196,22 +196,22 @@
 			files = (
 				D454848C290C127D00C3F5A3 /* editProfile.swift in Sources */,
 				D45841F8290D665B009A6D3D /* FriendList.swift in Sources */,
-				D4584206290EAF0A009A6D3D /* SwiftUIView.swift in Sources */,
 				D4548488290A97D800C3F5A3 /* homePage.swift in Sources */,
 				D4548478290A923D00C3F5A3 /* ContentView.swift in Sources */,
 				D45841FE290E7F93009A6D3D /* forgetPass.swift in Sources */,
+				D419309E2910FEC800EDED94 /* Delete account.swift in Sources */,
 				D458420E290EBC66009A6D3D /* remindersNotification.swift in Sources */,
 				D4D4DB09290FCF90006F3194 /* friendProfile.swift in Sources */,
-				D4584202290EAEE5009A6D3D /* Delete account.swift in Sources */,
 				D454848E290C1E1000C3F5A3 /* settingsPage.swift in Sources */,
-				D4584200290EAEC3009A6D3D /* forget password.swift in Sources */,
+				D41930A02910FED600EDED94 /* SwiftUIView.swift in Sources */,
 				D4548490290C216000C3F5A3 /* addFriend.swift in Sources */,
+				D419309C2910FEA600EDED94 /* SplashScreen.swift in Sources */,
 				D45841FA290D8132009A6D3D /* RemainderList.swift in Sources */,
 				D4548476290A923D00C3F5A3 /* Challenge1App.swift in Sources */,
+				D41930A42910FEEF00EDED94 /* privacy policy.swift in Sources */,
+				D41930A22910FEDF00EDED94 /* forget password.swift in Sources */,
 				D45841FC290E7895009A6D3D /* user.swift in Sources */,
 				D4548486290A94E700C3F5A3 /* signupPage.swift in Sources */,
-				D4584204290EAEF1009A6D3D /* privacy policy.swift in Sources */,
-				D458420C290EB5D7009A6D3D /* SplashScreen.swift in Sources */,
 				D454848A290AACC800C3F5A3 /* profilePage.swift in Sources */,
 				D4548484290A949800C3F5A3 /* loginPage.swift in Sources */,
 				D458420A290EB50B009A6D3D /* startPage.swift in Sources */,
