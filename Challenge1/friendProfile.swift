@@ -57,7 +57,7 @@ struct friendProfile: View {
                             .padding(.horizontal,20)
                         Spacer()
                         
-                        List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder)
+                        List(Reminderlist.filter { $0.name.contains("Casper")}){Reminder in RemainderRow(eachRemainder: Reminder)
                             
                         }
                         

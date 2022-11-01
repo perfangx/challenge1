@@ -19,7 +19,10 @@ struct Reminder: Identifiable{
 }
 
 var Reminderlist = [
-    Reminder(name: "Indria", time: "5m ago", content: "had a little chat with my mother fuvhjtfughrjfunrijkfhurb", numOfReact: 5, image:"profilePic"),
+    Reminder(name: "Indria", time: "5m ago", content: "had a little chat with my mother ", numOfReact: 5, image:"profilePic"),
+    Reminder(name: "Indria", time: "5m ago", content: "i just prayed", numOfReact: 5, image:"profilePic"),
+    Reminder(name: "Indria", time: "5m ago", content: "i showered ", numOfReact: 5, image:"profilePic"),
+    Reminder(name: "Indria", time: "5m ago", content: "i finished coding ", numOfReact: 5, image:"profilePic"),
     Reminder(name: "Casper", time: "30m ago", content: "just prayed Duhur", numOfReact: 3, image:"casper"),
     Reminder(name: "Leonardo", time: "3h ago", content: "I just ate lunch", numOfReact: 6, image:"casper")
     

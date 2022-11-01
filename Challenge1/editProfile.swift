@@ -31,12 +31,12 @@ struct editProfile: View {
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 100, height: 100)
-                        .offset(y:-60)
+                      //  .offset(y:-60)
                     Image(systemName: "camera")
                         .resizable()
                         .foregroundColor(.white)
                         .frame(width: 30, height: 24)
-                        .offset(y:-60)
+                       // .offset(y:-60)
                 }
                 
                 VStack(alignment: .center,spacing: 10){
@@ -71,7 +71,7 @@ struct editProfile: View {
                // .accentColor(.purple)
                 
                 //.navigationTitle("Edit Profile")
-                .offset(y:-60)
+              //  .offset(y:-60)
             }
             
         }

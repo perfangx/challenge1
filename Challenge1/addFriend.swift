@@ -23,7 +23,6 @@ struct addFriend: View {
                 
                 
                 
-                Spacer()
                 
                 
                 
@@ -36,7 +35,6 @@ struct addFriend: View {
                     .scrollContentBackground(.hidden) //to remove grey bg
                     .navigationTitle("add Friend")
                 //**** END PAGE CONTENT HERE*****
-                Spacer()
             }
             
         }

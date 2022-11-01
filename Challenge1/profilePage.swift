@@ -47,11 +47,9 @@ struct profilePage: View {
                     //edit profile button
                     NavigationLink(destination: editProfile(CurrentUser: currentUser), label:{
                         Text("Edit")
-                           // .buttonStyle(.bordered)
-                           // .frame(width: 40)
                             .bold()
                             .foregroundColor(.blue)
-                           // .offset(y:-60)
+                    
                        
                     })
                      
@@ -73,13 +71,13 @@ struct profilePage: View {
                             .pickerStyle(SegmentedPickerStyle())
                             .padding()
                             
-                            ChosenHeroView(selectedSide: selectedSide)
+                            ChosenView(selectedSide: selectedSide)
                             
                         }
                     
                 
                 }
-//                .offset(y:-60)
+                .accentColor(Color("Color"))
             
             }
             
@@ -93,7 +91,7 @@ struct profilePage: View {
         
     }
     
-    struct ChosenHeroView: View {
+    struct ChosenView: View {
         
         @State var searchText: String = ""
         var selectedSide: SideOfThForce
@@ -121,7 +119,8 @@ struct profilePage: View {
                         .padding(.horizontal,20)
                     Spacer()
                     
-                    List(Reminderlist){Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
+                    List(Reminderlist.filter { $0.name.contains("Indria") })
+                    {Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
                         Button(role: .destructive){
                         } label: {
                             Label("Delete", systemImage: "trash.circle")
@@ -242,6 +241,7 @@ struct profilePage: View {
     struct friendRow1: View {
         var eachFriend: friend
         var body: some View{
+            NavigationLink(destination: friendProfile()) {
             HStack{
                 VStack(spacing:1){
                     Image(eachFriend.image)
@@ -254,12 +254,14 @@ struct profilePage: View {
                     
                     
                 }
+                }
                 
             }
         }
     }
     
     struct RemainderRow: View {
+        @State var listOfReactionsIsShowing = false
         var eachRemainder: Reminder
         var body: some View{
             
@@ -278,7 +280,8 @@ struct profilePage: View {
                             .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                             .padding(10)
                         Spacer()
-                        Text(eachRemainder.time)
+                        Text(Date().addingTimeInterval(600), style: .time)
+                      //  Text(eachRemainder.time)
                             .font(.caption)
                             .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                     }
@@ -288,6 +291,20 @@ struct profilePage: View {
                         .lineLimit(nil)
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 10)
+                    
+                    HStack{
+                        Text("♥️")
+                        Text(eachRemainder.numOfReact > 0 ? "\(eachRemainder.numOfReact)" : "")
+                    }.onTapGesture(perform: {
+                        listOfReactionsIsShowing = false
+
+                    })
+                    .font(.system(size: 12))
+                    .padding(4)
+                    .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274, opacity: 25.0))
+                    .background(Color(hue: 0.942, saturation: 0.095, brightness: 0.878))
+                    .cornerRadius(5)
+                    .padding(.leading,200)
                  
                 }
             }
