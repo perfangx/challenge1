@@ -40,6 +40,7 @@ struct startPage: View {
                                 .foregroundColor(Color("Color"))
                                 .padding()
                             
+                            
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
                                         .stroke(Color("Color"), lineWidth: 1)

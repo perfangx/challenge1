@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D419309C2910FEA600EDED94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309B2910FEA600EDED94 /* SplashScreen.swift */; };
-		D419309E2910FEC800EDED94 /* Delete account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309D2910FEC800EDED94 /* Delete account.swift */; };
-		D41930A02910FED600EDED94 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D419309F2910FED600EDED94 /* SwiftUIView.swift */; };
-		D41930A22910FEDF00EDED94 /* forget password.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A12910FEDF00EDED94 /* forget password.swift */; };
-		D41930A42910FEEF00EDED94 /* privacy policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A32910FEEF00EDED94 /* privacy policy.swift */; };
+		D41930A62911009D00EDED94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A52911009D00EDED94 /* SplashScreen.swift */; };
+		D41930A8291100E300EDED94 /* privacy policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A7291100E300EDED94 /* privacy policy.swift */; };
+		D41930AA2911011A00EDED94 /* Delete account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930A92911011A00EDED94 /* Delete account.swift */; };
+		D41930AC2911014100EDED94 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930AB2911014100EDED94 /* SwiftUIView.swift */; };
+		D41930AE2911016800EDED94 /* forget password.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41930AD2911016800EDED94 /* forget password.swift */; };
 		D4548476290A923D00C3F5A3 /* Challenge1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548475290A923D00C3F5A3 /* Challenge1App.swift */; };
 		D4548478290A923D00C3F5A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4548477290A923D00C3F5A3 /* ContentView.swift */; };
 		D454847A290A923D00C3F5A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4548479290A923D00C3F5A3 /* Assets.xcassets */; };
@@ -33,11 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D419309B2910FEA600EDED94 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		D419309D2910FEC800EDED94 /* Delete account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Delete account.swift"; sourceTree = "<group>"; };
-		D419309F2910FED600EDED94 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		D41930A12910FEDF00EDED94 /* forget password.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "forget password.swift"; sourceTree = "<group>"; };
-		D41930A32910FEEF00EDED94 /* privacy policy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "privacy policy.swift"; sourceTree = "<group>"; };
+		D41930A52911009D00EDED94 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		D41930A7291100E300EDED94 /* privacy policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "privacy policy.swift"; sourceTree = "<group>"; };
+		D41930A92911011A00EDED94 /* Delete account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Delete account.swift"; sourceTree = "<group>"; };
+		D41930AB2911014100EDED94 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		D41930AD2911016800EDED94 /* forget password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "forget password.swift"; sourceTree = "<group>"; };
 		D4548472290A923D00C3F5A3 /* Challenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4548475290A923D00C3F5A3 /* Challenge1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge1App.swift; sourceTree = "<group>"; };
 		D4548477290A923D00C3F5A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,18 +90,18 @@
 			isa = PBXGroup;
 			children = (
 				D4548475290A923D00C3F5A3 /* Challenge1App.swift */,
-				D419309B2910FEA600EDED94 /* SplashScreen.swift */,
 				D4548477290A923D00C3F5A3 /* ContentView.swift */,
 				D4584209290EB50B009A6D3D /* startPage.swift */,
 				D4548483290A949800C3F5A3 /* loginPage.swift */,
-				D419309D2910FEC800EDED94 /* Delete account.swift */,
+				D41930A52911009D00EDED94 /* SplashScreen.swift */,
+				D41930A92911011A00EDED94 /* Delete account.swift */,
 				D4548485290A94E700C3F5A3 /* signupPage.swift */,
-				D41930A12910FEDF00EDED94 /* forget password.swift */,
-				D419309F2910FED600EDED94 /* SwiftUIView.swift */,
+				D41930A7291100E300EDED94 /* privacy policy.swift */,
 				D45841FD290E7F93009A6D3D /* forgetPass.swift */,
-				D41930A32910FEEF00EDED94 /* privacy policy.swift */,
 				D454848D290C1E1000C3F5A3 /* settingsPage.swift */,
 				D454848B290C127D00C3F5A3 /* editProfile.swift */,
+				D41930AB2911014100EDED94 /* SwiftUIView.swift */,
+				D41930AD2911016800EDED94 /* forget password.swift */,
 				D454848F290C216000C3F5A3 /* addFriend.swift */,
 				D4548487290A97D800C3F5A3 /* homePage.swift */,
 				D4D4DB08290FCF90006F3194 /* friendProfile.swift */,
@@ -199,17 +199,17 @@
 				D4548488290A97D800C3F5A3 /* homePage.swift in Sources */,
 				D4548478290A923D00C3F5A3 /* ContentView.swift in Sources */,
 				D45841FE290E7F93009A6D3D /* forgetPass.swift in Sources */,
-				D419309E2910FEC800EDED94 /* Delete account.swift in Sources */,
 				D458420E290EBC66009A6D3D /* remindersNotification.swift in Sources */,
 				D4D4DB09290FCF90006F3194 /* friendProfile.swift in Sources */,
 				D454848E290C1E1000C3F5A3 /* settingsPage.swift in Sources */,
-				D41930A02910FED600EDED94 /* SwiftUIView.swift in Sources */,
 				D4548490290C216000C3F5A3 /* addFriend.swift in Sources */,
-				D419309C2910FEA600EDED94 /* SplashScreen.swift in Sources */,
+				D41930A62911009D00EDED94 /* SplashScreen.swift in Sources */,
 				D45841FA290D8132009A6D3D /* RemainderList.swift in Sources */,
+				D41930A8291100E300EDED94 /* privacy policy.swift in Sources */,
 				D4548476290A923D00C3F5A3 /* Challenge1App.swift in Sources */,
-				D41930A42910FEEF00EDED94 /* privacy policy.swift in Sources */,
-				D41930A22910FEDF00EDED94 /* forget password.swift in Sources */,
+				D41930AE2911016800EDED94 /* forget password.swift in Sources */,
+				D41930AA2911011A00EDED94 /* Delete account.swift in Sources */,
+				D41930AC2911014100EDED94 /* SwiftUIView.swift in Sources */,
 				D45841FC290E7895009A6D3D /* user.swift in Sources */,
 				D4548486290A94E700C3F5A3 /* signupPage.swift in Sources */,
 				D454848A290AACC800C3F5A3 /* profilePage.swift in Sources */,
