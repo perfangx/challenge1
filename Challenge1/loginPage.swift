@@ -82,14 +82,21 @@ struct loginPage: View {
                     NavigationLink(destination:         forgetPass(), label:{
                         Text("Forgot password?")
                             .font(.system(size: 14))
-                            .padding()
+                            .foregroundColor(.blue)
+                          
                     })
-                    
-                    NavigationLink(destination:         signupPage(), label:{
-                        Text("Dont have an account? Create one")
+                    HStack{
+                        
+                        Text("Dont have an account?")
                             .font(.system(size: 14))
-                            .padding()
-                    })
+                            .foregroundColor(.gray)
+                        NavigationLink(destination:         signupPage(), label:{
+                            Text("Create one")
+                                .font(.system(size: 14))
+                                .foregroundColor(.blue)
+                              
+                        })
+                    }
                     //**** END PAGE CONTENT HERE*****
                     Spacer()
                     Spacer()

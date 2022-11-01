@@ -28,14 +28,16 @@ struct forgetPass: View {
                         .font(.system(size: 100))
                     Text("Trouble logging in?")
                         .foregroundColor(Color("Color"))
-                        .font(.system(size: 36))
+                        .font(.system(size: 24))
                         
                     
 
                     Text("Enter your username or email and we’ll send you a link to get back into your account.")
+                        .frame(width: 307 , height: 44)
                         .multilineTextAlignment(.center)
                         .font(.system(size: 12))
-                        .padding(20)
+                        .foregroundColor(.gray)
+                        .padding()
                     
                         
                         
@@ -61,7 +63,6 @@ struct forgetPass: View {
                         }
                         
                    
-                    .padding()
                     
                     Spacer()
                     
@@ -70,6 +71,7 @@ struct forgetPass: View {
                 }
                 
                 .navigationTitle("Reset Password")
+                .navigationBarHidden(true)
                 Color(.white)
             }
         }

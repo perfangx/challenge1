@@ -91,24 +91,29 @@ struct startPage: View {
                         .background(Color(.lightGray))
                         .background(.white)
                         .cornerRadius(8)
-                    
+                        
                         
                         HStack{
-                            
-                            Text(" By signing up, you agree to our Terms, Privacy Policy, and Cookie Use.")
-                                .multilineTextAlignment(.center)
-                                .padding()
+                           
+                            Text("By signing up you agree to our")
                             
                                 .font(.system(size: 14))
+                                .foregroundColor(.gray)
                             
-                            
-                            
+                            NavigationLink(destination:         privacy_policy(), label:{
+                                Text("Terms , Privacy Policy")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.blue)
+                                    
+                            })
+                          
                         }
+                     
                         //**** END PAGE CONTENT HERE*****
                     }
                     //.navigationTitle("Start page")
                     .navigationBarHidden(true)
-                    
+                    .padding()
                 
                 }
             

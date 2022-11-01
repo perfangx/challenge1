@@ -49,6 +49,7 @@ struct profilePage: View {
                            // .buttonStyle(.bordered)
                            // .frame(width: 40)
                             .bold()
+                            .foregroundColor(.blue)
                            // .offset(y:-60)
                        
                     })

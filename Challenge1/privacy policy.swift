@@ -38,10 +38,12 @@ struct privacy_policy: View {
                         Text("( https://scratch.com/en/privacy)")
                             .font(.body)
                             .fontWeight(.heavy)
+                         
                     }
             
                 .navigationTitle("Our Privacy Policys")
                 .font(.callout)
+                
                 .accentColor(.black)
             }
         }
