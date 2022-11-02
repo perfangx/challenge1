@@ -15,7 +15,7 @@ struct homePage: View {
     @State var CurrentUser = User()
     @State var scratchInput: String = ""
     @State var sendScratchIsShowing = false
- 
+    
     var body: some View {
         NavigationView(){
             ZStack {
@@ -68,9 +68,9 @@ struct homePage: View {
                                     .shadow( radius: 3)
                             )
                             .padding()
-                            
+                        
                         Button(action:{ if scratchInput != "" {
-                            Reminderlist.insert(Reminder(name: CurrentUser.name, time: "5 min ago", content: scratchInput, numOfReact: 0, image: "profilePic"), at: Reminderlist.startIndex)
+                            Reminderlist.insert(Reminder(name: CurrentUser.name, time: "Now", content: scratchInput, numOfReact: 0, image: "profilePic"), at: Reminderlist.startIndex)
                         }
                             sendScratchIsShowing.toggle()
                             scratchInput.removeAll()
@@ -87,18 +87,18 @@ struct homePage: View {
                                 }
                             }
                             
-                                //sending notification
+                            //sending notification
                             let content = UNMutableNotificationContent()
                             content.title = "Scratch!"
                             content.subtitle = "Nahia just \(Reminderlist[0].content), dont forget to do that too"
                             content.sound = UNNotificationSound.default
-
+                            
                             // show this notification five seconds from now
                             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 7, repeats: false)
-
+                            
                             // choose a random identifier
                             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
+                            
                             // add our notification request
                             UNUserNotificationCenter.current().add(request)
                             
@@ -112,9 +112,9 @@ struct homePage: View {
                     .frame(maxWidth:.infinity, maxHeight: .infinity)
                     .background(Color.white)
                     .opacity(0.9)
-//                                                    .onTapGesture {
-//                                                        sendScratchIsShowing.toggle()
-//                                                    }
+                    //                                                    .onTapGesture {
+                    //                                                        sendScratchIsShowing.toggle()
+                    //                                                    }
                 }
                 
             }
@@ -130,7 +130,7 @@ struct homePage: View {
 
 
 struct ContentOfAllReminders : View{
-  
+    
     let reminders : [Reminder]
     
     var body: some View{
