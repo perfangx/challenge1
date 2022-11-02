@@ -28,51 +28,67 @@ struct forget_password: View {
                                } label: {
                                 Image(systemName: isSecure ? "lock.fill" : "lock.open")
                                }
-                Color.white
-                    .opacity(0.1)
-                    .ignoresSafeArea()
+//                Color.white
+//                    .opacity(0.1)
+//                    .ignoresSafeArea()
                 VStack {
                     Rectangle()
                         .fill(Color.clear)
                         .frame(height: 10)
-                        .background(LinearGradient(colors: [.purple.opacity(0.5), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .background(LinearGradient(colors: [.purple.opacity(0.2), .blue.opacity(0.3)], startPoint: .topLeading, endPoint: .bottomTrailing))
                     VStack {
                         
                         NavigationView {
-                            VStack(spacing: 100) {
+                            VStack(spacing: 15) {
                                 
-                                VStack(spacing:16) {
+                                VStack(spacing:15) {
                                     
+                                    Text("Updating Password")
+                                        .foregroundColor(Color("Color"))
+                                        .font(.system(size: 36))
+                                        .padding()
                                     SecureField("Current Password", text:$currentpassword )
-                                        .textFieldStyle(.roundedBorder)
+//                                        .textFieldStyle(.roundedBorder)
+//
+                                        .padding()
+                                        .frame(width:307,height:44)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(Color("Color"), lineWidth: 1))
                                     
                                     SecureField("new Password", text:$newpassword )
-                                    .textFieldStyle(.roundedBorder)
-                                    
+//                                    .textFieldStyle(.roundedBorder)
+                                        .padding()
+                                        .frame(width:307,height:44)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(Color("Color"), lineWidth: 1))
                                     SecureField("Confirm Password", text:$confirmpassword )
-                                        .textFieldStyle(.roundedBorder)
-                                    
+//                                        .textFieldStyle(.roundedBorder)
+                                        .padding()
+                                        .frame(width:307,height:44)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(Color("Color"), lineWidth: 1))
                                 }
                                 
                                 Button("Save"){
                                     
                                 }
-                                .padding()
+                                .frame(width:307 , height:44 )
                                 .foregroundColor(.white)
-                                .frame(width: 350 ,height: 50)
-                                .background(.purple.opacity(0.9))
-                                .opacity(0.9)
-                                .cornerRadius(10)
-                                .border(Color(.clear))
-                                .font(.system(size: 16, weight: .bold))
+                                .background(Color("Color"))
+                                .cornerRadius(8)
+                            
                             }
-                            .padding(.horizontal, 15)
-                            .navigationTitle("Updating Password")
+//                            .padding(.horizontal, 15)
+//                            .navigationTitle("Updating Password")
+                            .navigationBarHidden(true)
                             //.ignoresSafeArea()
-                            Spacer()
+//                            Spacer()
                             
                         }
-                        
+                      
                         
                     }
                 }

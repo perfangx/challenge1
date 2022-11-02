@@ -40,21 +40,23 @@ struct friendProfile: View {
                             .frame(width: 100, height: 100)
                         
                         Text("Friend")
-                            .font(.title)
-                        
+                            .font(.custom("Helvetica", fixedSize: 20 ))
+                            .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                         Text("@Friend")
-                        
+                            .font(.custom("Helvetica", fixedSize: 16 ))
                         Text("friend bio")
-                        
-                        Text("my scratch")
-                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                        Spacer()
+                        Text("my scratches:")
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading)
                             .font(.title3)
+                            .fontWeight(.regular)
                             .foregroundColor(Color("Color"))
-                        Rectangle()
-                            .fill(Color("Color"))
-                            .frame(height:1)
-                            .padding(.horizontal,20)
+                        
+//                        Rectangle()
+//                            .fill(Color("Color"))
+//                            .frame(height:1)
+//                            .padding(.horizontal,20)
                         Spacer()
                         
                         List(Reminderlist.filter { $0.name.contains("Casper")}){Reminder in RemainderRow(eachRemainder: Reminder)

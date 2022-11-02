@@ -55,11 +55,14 @@ struct profilePage: View {
                      
                     
                     Text(CurrentUser.name)
-                        .font(.title)
+                        .font(.custom("Helvetica", fixedSize: 20 ))
+                        .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
 
                     Text("@"+CurrentUser.userName)
+                        .foregroundColor(Color(.black))
                         
                     Text(CurrentUser.bio)
+                        .foregroundColor(Color(.black))
 
                        
                         VStack{
@@ -69,6 +72,7 @@ struct profilePage: View {
                                 }
                             }
                             .pickerStyle(SegmentedPickerStyle())
+
                             .padding()
                             
                             ChosenView(selectedSide: selectedSide)
@@ -86,7 +90,7 @@ struct profilePage: View {
     }
     
     enum SideOfThForce: String, CaseIterable{
-        case Myscratch = "My scratch"
+        case Myscratch = "My scratches"
         case Friends = "Friends"
         
     }
@@ -108,15 +112,16 @@ struct profilePage: View {
                 // **** CASE 1 : MY SCRATCH ****
             case .Myscratch:
                 VStack(spacing: 10){
-                    Text("my scratch")
-                        .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                    Text("My scratches:")
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading)
                         .font(.title3)
+                        .fontWeight(.regular)
                         .foregroundColor(Color("Color"))
-                    Rectangle()
-                        .fill(Color("Color"))
-                        .frame(height:1)
-                        .padding(.horizontal,20)
+//                    Rectangle()
+//                        .fill(Color("Color"))
+//                        .frame(height:1)
+//                        .padding(.horizontal,20)
                     Spacer()
                     
                     List(Reminderlist.filter { $0.name.contains("Indria") })
@@ -136,15 +141,15 @@ struct profilePage: View {
                     ScrollView(.vertical){
                     VStack (spacing: 10) {
                         
-                        Text("Friend Request")
-                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                        Text("Friend Request:")
+                            .frame(maxWidth: .infinity, alignment: .leading)                     .font(.title3)
+                            .fontWeight(.regular)
                             .padding(.leading)
-                            .font(.title3)
                             .foregroundColor(Color("Color"))
-                        Rectangle()
-                            .fill(Color("Color"))
-                            .frame(height:1 )
-                            .padding(.horizontal,20)
+//                        Rectangle()
+//                            .fill(Color("Color"))
+//                            .frame(height:1 )
+//                            .padding(.horizontal,20)
                         
                        // *** friend rec ***
                         
@@ -157,6 +162,7 @@ struct profilePage: View {
                             VStack(alignment: .leading) {
                                 Text("Lubosek")
                                     .font(.title3)
+                                    .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                                 Text("@Lubosek18")
                                     .font(.callout)
                                     .foregroundColor(.gray)
@@ -186,15 +192,16 @@ struct profilePage: View {
             
                         
                         
-                        Text("Myfriend")
-                            .frame(maxWidth: .infinity, alignment: .leading)                    .fontWeight(.light)
+                        Text("My Friends:")
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading)
                             .font(.title3)
+                            .fontWeight(.regular)
                             .foregroundColor(Color("Color"))
-                        Rectangle()
-                            .fill(Color("Color"))
-                            .frame(height:1 )
-                            .padding(.horizontal,20)
+//                        Rectangle()
+//                            .fill(Color("Color"))
+//                            .frame(height:1 )
+//                            .padding(.horizontal,20)
 
                         HStack{
                             
@@ -288,6 +295,8 @@ struct profilePage: View {
                     .padding(.top,5)
                     
                     Text(eachRemainder.content)
+                        .font(.headline)
+                        .fontWeight(.regular)
                         .lineLimit(nil)
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 10)

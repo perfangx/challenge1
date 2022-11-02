@@ -185,6 +185,8 @@ struct ReminderView : View{
                     }
                     .padding(.top,5)
                     Text(reminder.content)
+                        .font(.headline)
+                        .fontWeight(.regular)
                         .lineLimit(nil)
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 10)
