@@ -64,10 +64,11 @@ struct forget_password: View {
                                 .opacity(0.9)
                                 .cornerRadius(10)
                                 .border(Color(.clear))
-                                .font(.system(size: 16, weight: .bold))
+                                .font(.system(size: 20, weight: .semibold))
                             }
                             .padding(.horizontal, 15)
                             .navigationTitle("Updating Password")
+                            
                             //.ignoresSafeArea()
                             Spacer()
                             

@@ -89,7 +89,7 @@ struct settingsPage: View {
                     .opacity(0.9)
                     .cornerRadius(10)
                     .border(Color(.clear))
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.system(size: 20, weight: .semibold))
                     .padding()
                     
                     .fullScreenCover(isPresented: $isPresentedFullScreenCover) {

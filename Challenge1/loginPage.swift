@@ -68,8 +68,8 @@ struct loginPage: View {
                     .foregroundColor(.white)
                     .background(Color("Color"))
                     .cornerRadius(8)
-                    
-                    
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
                     
                     
                     Spacer()

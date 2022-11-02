@@ -62,7 +62,8 @@ struct friendRow: View {
                 .cornerRadius(8)
             VStack(alignment: .leading) {
                 Text(eachFriend.name)
-                    .font(.title3)
+                    .font(.headline)
+                    .fontWeight(.medium)
                 Text(eachFriend.username)
                     .font(.callout)
                     .foregroundColor(.gray)

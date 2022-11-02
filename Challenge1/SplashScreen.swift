@@ -32,7 +32,7 @@ struct SplashScreen: View {
                 
                 Text("\"You scratch my back and I’ll scratch yours\"")
                     .fontWeight(.ultraLight)
-                    .font(.custom("Marker Felt", fixedSize: 19 ))
+                    .font(.custom("Marker Felt", fixedSize: 20 ))
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("Color"))
                     .padding(.top, 150.0)

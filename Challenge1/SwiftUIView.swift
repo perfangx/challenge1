@@ -23,24 +23,28 @@ struct SwiftUIView: View {
                     
                     Text("If you need help in something you can contact with us via email :")
                         .font(.headline)
+                        .multilineTextAlignment(.leading)
                     
                     Text("( Scratchs@gmail.com ).")
-                        .font(.headline)
-                        .foregroundColor(Color.purple)
+                        .font(.callout)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.pink)
                         .accentColor(.pink)
                     
                     Text("Did you know that Ministry of health in Saudi Arabia had launched a call center service to people with depression and anxiety by providing Comprehensive primary psychological services via number:")
                         .font(.headline)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                     
                     Text("( 920033360 )")
-                        .font(.headline)
+                        .font(.callout)
+                        .fontWeight(.bold)
                         .foregroundColor(Color.pink)
+                        
                     
                     
-                    Text("Remember your not alone 💕")
-                        .font(.title3)
-                        .fontWeight(.medium)
+                    Text("Remember you are not alone 💕")
+                        .font(.callout)
+                        .fontWeight(.bold)
                         .foregroundColor(Color.pink)
                 }
                 

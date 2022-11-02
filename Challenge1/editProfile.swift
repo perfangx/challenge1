@@ -41,10 +41,16 @@ struct editProfile: View {
                 
                 VStack(alignment: .center,spacing: 10){
                     Text(CurrentUser.name)
-                        .font(.title)
+                        .font(.title2)
+                        .font(.custom("Helvicta", fixedSize: 20))
+    
+                    
 
                     Text("@"+CurrentUser.userName)
+                        .font(.custom("Helvicta", fixedSize: 16))
+    
                     Text(CurrentUser.bio)
+                        .font(.custom("Helvicta", fixedSize: 16 ))
                     
     
                     //edit profile form
@@ -64,7 +70,7 @@ struct editProfile: View {
                         .foregroundColor(.white)
                         .background(Color("Color"))
                         .cornerRadius(8)
-                        
+                        .font(.system(size: 20, weight: .semibold))
                     }
                     .scrollContentBackground(.hidden) //to remove grey bg
                 }

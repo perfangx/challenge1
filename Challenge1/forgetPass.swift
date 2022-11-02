@@ -41,7 +41,7 @@ struct forgetPass: View {
                     
                         
                         
-                        TextField("username or email" , text: $email)
+                        TextField("Username or Email" , text: $email)
                             .padding()
                             .frame(width:307,height:44)
                             .overlay(
@@ -58,8 +58,8 @@ struct forgetPass: View {
                                 .foregroundColor(.white)
                                 .background(Color("Color"))
                                 .cornerRadius(8)
-                            
-                            
+                                .fontWeight(.semibold)
+                                .font(.system(size: 20))
                         }
                         
                    

@@ -35,7 +35,7 @@ struct startPage: View {
                             Text("\"You scratch my back and I’ll scratch yours\"")
                                 
                                 .fontWeight(.ultraLight)
-                                .font(.custom("Marker Felt", fixedSize: 19 ))
+                                .font(.custom("Marker Felt", fixedSize: 20 ))
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(Color("Color"))
                                 .offset(y:-50)
@@ -45,6 +45,7 @@ struct startPage: View {
                         //first button link
                         NavigationLink(destination: loginPage(), label:{
                             Text("Log in")
+                                .fontWeight(.semibold)
                                 .foregroundColor(Color("Color"))
                                 .padding()
                             
@@ -59,6 +60,7 @@ struct startPage: View {
                         //second button link
                         NavigationLink(destination: signupPage(), label:{
                             Text("Create account")
+                                .fontWeight(.semibold)
                             
                                 .frame(width:307 , height:44 )
                                 .foregroundColor(.white)
@@ -92,7 +94,7 @@ struct startPage: View {
                         .background(Color(.lightGray))
                         .background(.white)
                         .cornerRadius(8)
-                        
+                        .fontWeight(.semibold)
                         
                         HStack{
                            
