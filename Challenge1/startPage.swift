@@ -11,6 +11,7 @@ struct startPage: View {
     var body: some View {
         NavigationView(){
             ZStack {
+                
                     Rectangle()
                         .fill(Color.clear)
                         .background(LinearGradient(colors: [.purple.opacity(0.1), .blue.opacity(0.2)],
