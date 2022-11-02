@@ -27,3 +27,4 @@ var Reminderlist = [
     Reminder(name: "Leonardo", time: "3h ago", content: "I just ate lunch", numOfReact: 6, image:"casper")
     
 ]
+

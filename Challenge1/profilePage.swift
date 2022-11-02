@@ -206,7 +206,7 @@ struct profilePage: View {
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
                                     .fill(Color(.white))
-                                    .shadow(radius: 2, x: 0, y: 0)
+                                    .shadow(radius: 2)
                             )
                             
                             //add friend button
