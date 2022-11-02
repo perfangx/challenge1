@@ -11,7 +11,7 @@ struct SwiftUIView: View {
     var body: some View {
         VStack {
             Image("logo")
-                
+            
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .offset(y:-10)

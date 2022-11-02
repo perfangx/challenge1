@@ -23,12 +23,12 @@ struct SplashScreen: View {
                     .padding(.top,10.0)
                 
             }
-           
+            
             
             
             
             HStack(){
-            
+                
                 
                 Text("\"You scratch my back and I’ll scratch yours\"")
                     .fontWeight(.ultraLight)
@@ -36,7 +36,7 @@ struct SplashScreen: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("Color"))
                     .padding(.top, 150.0)
-            
+                
             }
             
         }
@@ -49,4 +49,4 @@ struct SplashScreen_Previews: PreviewProvider {
     }
 }
 
- 
+

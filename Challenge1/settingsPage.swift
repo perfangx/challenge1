@@ -29,12 +29,12 @@ struct settingsPage: View {
                                                startPoint: .topLeading, endPoint: .bottomTrailing)
                     )
                 
-               Spacer()
+                Spacer()
                 
                 //****START PAGE CONTENT HERE*****
                 
                 
-//                Text("this is settings page")
+                //                Text("this is settings page")
                 Form
                 {
                     Section(header: Text("General Setting")) {
@@ -63,39 +63,39 @@ struct settingsPage: View {
                             Text("privacy policy")
                             
                         }
-                            
-                            NavigationLink(destination: SwiftUIView()) {
-                                Text("I Need Help")
-                                
-                            }
-                            
-                            
-                            
+                        
+                        NavigationLink(destination: SwiftUIView()) {
+                            Text("I Need Help")
                             
                         }
-                        .navigationTitle("Setting")
-                        .accentColor(.black)
+                        
+                        
+                        
                         
                     }
+                    .navigationTitle("Setting")
+                    .accentColor(.black)
+                    
+                }
                 
                 Button("Log Out", action: {
                     
                     isPresentedFullScreenCover = true})
-                    
-                    .foregroundColor(.white)
-                    .frame(width: 350 ,height: 50)
-                    
-                    .background(Color.red.opacity(0.9))
-                    .opacity(0.9)
-                    .cornerRadius(10)
-                    .border(Color(.clear))
-                    .font(.system(size: 16, weight: .bold))
-                    .padding()
-                    
-                    .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
-                        startPage()
-                    }
-               
+                
+                .foregroundColor(.white)
+                .frame(width: 350 ,height: 50)
+                
+                .background(Color.red.opacity(0.9))
+                .opacity(0.9)
+                .cornerRadius(10)
+                .border(Color(.clear))
+                .font(.system(size: 16, weight: .bold))
+                .padding()
+                
+                .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
+                    startPage()
+                }
+                
                 
                 //**** END PAGE CONTENT HERE*****
                 Spacer()

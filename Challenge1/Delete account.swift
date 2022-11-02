@@ -19,7 +19,7 @@ struct Delete_account: View {
                         .fill(Color.clear)
                         .frame(height: 10)
                         .background(LinearGradient(colors: [.purple.opacity(0.5), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        Spacer()
+                    Spacer()
                     
                     VStack {
                         
@@ -31,8 +31,8 @@ struct Delete_account: View {
                         Text("Are you sure you want to Delete you account?")
                             .foregroundColor(Color("Color"))
                             .font(.system(size: 18))
-                            
-                    
+                        
+                        
                         HStack {
                             
                             Button("Yes") {

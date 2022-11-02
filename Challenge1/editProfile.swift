@@ -21,7 +21,7 @@ struct editProfile: View {
                     .fill(Color.clear)
                     .frame(height: 10)
                     .background(LinearGradient(colors: [.purple.opacity(0.2), .blue.opacity(0.3)],
-
+                                               
                                                startPoint: .topLeading, endPoint: .bottomTrailing))
                 
                 
@@ -31,22 +31,22 @@ struct editProfile: View {
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 100, height: 100)
-                      //  .offset(y:-60)
+                    //  .offset(y:-60)
                     Image(systemName: "camera")
                         .resizable()
                         .foregroundColor(.white)
                         .frame(width: 30, height: 24)
-                       // .offset(y:-60)
+                    // .offset(y:-60)
                 }
                 
                 VStack(alignment: .center,spacing: 10){
                     Text(CurrentUser.name)
                         .font(.title)
-
+                    
                     Text("@"+CurrentUser.userName)
                     Text(CurrentUser.bio)
                     
-    
+                    
                     //edit profile form
                     Form{
                         Section(header: Text("Edit Profile")){
@@ -55,7 +55,7 @@ struct editProfile: View {
                             TextField("Bio", text: $bio)
                         }
                         Button("Save", action: {
-                                                
+                            
                             setTheValues ()
                             
                         })
@@ -68,10 +68,10 @@ struct editProfile: View {
                     }
                     .scrollContentBackground(.hidden) //to remove grey bg
                 }
-               // .accentColor(.purple)
+                // .accentColor(.purple)
                 
                 //.navigationTitle("Edit Profile")
-              //  .offset(y:-60)
+                //  .offset(y:-60)
             }
             
         }

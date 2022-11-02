@@ -16,21 +16,19 @@ struct forget_password: View {
     var body: some View {
         NavigationView {
             ZStack {
-                    Group {
-                                   if isSecure {
-                                       SecureField(confirmpassword, text: $text)
-                                   } else {
-                                       TextField(newpassword, text: $text)
-                                   }
-                               }.padding(.trailing, 32)
-                               Button {
-                                   isSecure.toggle()
-                               } label: {
-                                Image(systemName: isSecure ? "lock.fill" : "lock.open")
-                               }
-//                Color.white
-//                    .opacity(0.1)
-//                    .ignoresSafeArea()
+                Group {
+                    if isSecure {
+                        SecureField(confirmpassword, text: $text)
+                    } else {
+                        TextField(newpassword, text: $text)
+                    }
+                }.padding(.trailing, 32)
+                Button {
+                    isSecure.toggle()
+                } label: {
+                    Image(systemName: isSecure ? "lock.fill" : "lock.open")
+                }
+                
                 VStack {
                     Rectangle()
                         .fill(Color.clear)
@@ -48,8 +46,7 @@ struct forget_password: View {
                                         .font(.system(size: 36))
                                         .padding()
                                     SecureField("Current Password", text:$currentpassword )
-//                                        .textFieldStyle(.roundedBorder)
-//
+                                    
                                         .padding()
                                         .frame(width:307,height:44)
                                         .overlay(
@@ -57,14 +54,14 @@ struct forget_password: View {
                                                 .stroke(Color("Color"), lineWidth: 1))
                                     
                                     SecureField("new Password", text:$newpassword )
-//                                    .textFieldStyle(.roundedBorder)
+                                    
                                         .padding()
                                         .frame(width:307,height:44)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 8)
                                                 .stroke(Color("Color"), lineWidth: 1))
                                     SecureField("Confirm Password", text:$confirmpassword )
-//                                        .textFieldStyle(.roundedBorder)
+                                    
                                         .padding()
                                         .frame(width:307,height:44)
                                         .overlay(
@@ -79,28 +76,26 @@ struct forget_password: View {
                                 .foregroundColor(.white)
                                 .background(Color("Color"))
                                 .cornerRadius(8)
-                            
+                                
                             }
-//                            .padding(.horizontal, 15)
-//                            .navigationTitle("Updating Password")
+                            
                             .navigationBarHidden(true)
-                            //.ignoresSafeArea()
-//                            Spacer()
+                            
                             
                         }
-                      
+                        
                         
                     }
                 }
             }
         }
+    }
+    
+    
+    
+    struct forget_password_Previews: PreviewProvider {
+        static var previews: some View {
+            forget_password(text: "surrent password")
         }
-            
-            
-            
-            struct forget_password_Previews: PreviewProvider {
-                static var previews: some View {
-                    forget_password(text: "surrent password")
-                }
-            }
-        }
+    }
+}

@@ -31,58 +31,58 @@ struct profilePage: View {
                             Label("Settings", systemImage: "gearshape")
                         })
                     }
-               
-                    //****START PAGE CONTENT HERE*****
-                    
-            
-                  
+                
+                //****START PAGE CONTENT HERE*****
+                
+                
+                
                 
                 VStack(alignment: .center,spacing: 10){
                     Image("profilePic")
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 100, height: 100)
-                     
-               
+                    
+                    
                     //edit profile button
                     NavigationLink(destination: editProfile(CurrentUser: currentUser), label:{
                         Text("Edit")
                             .bold()
                             .foregroundColor(.blue)
-                    
-                       
+                        
+                        
                     })
-                     
+                    
                     
                     Text(CurrentUser.name)
                         .font(.custom("Helvetica", fixedSize: 20 ))
                         .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
-
+                    
                     Text("@"+CurrentUser.userName)
                         .foregroundColor(Color(.black))
-                        
+                    
                     Text(CurrentUser.bio)
                         .foregroundColor(Color(.black))
-
-                       
-                        VStack{
-                            Picker("choose a side ", selection: $selectedSide){
-                                ForEach(SideOfThForce.allCases, id: \.self){
-                                    Text($0.rawValue)
-                                }
-                            }
-                            .pickerStyle(SegmentedPickerStyle())
-
-                            .padding()
-                            
-                            ChosenView(selectedSide: selectedSide)
-                            
-                        }
                     
-                
+                    
+                    VStack{
+                        Picker("choose a side ", selection: $selectedSide){
+                            ForEach(SideOfThForce.allCases, id: \.self){
+                                Text($0.rawValue)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        
+                        .padding()
+                        
+                        ChosenView(selectedSide: selectedSide)
+                        
+                    }
+                    
+                    
                 }
                 .accentColor(Color("Color"))
-            
+                
             }
             
             
@@ -118,10 +118,10 @@ struct profilePage: View {
                         .font(.title3)
                         .fontWeight(.regular)
                         .foregroundColor(Color("Color"))
-//                    Rectangle()
-//                        .fill(Color("Color"))
-//                        .frame(height:1)
-//                        .padding(.horizontal,20)
+                    //                    Rectangle()
+                    //                        .fill(Color("Color"))
+                    //                        .frame(height:1)
+                    //                        .padding(.horizontal,20)
                     Spacer()
                     
                     List(Reminderlist.filter { $0.name.contains("Indria") })
@@ -139,116 +139,110 @@ struct profilePage: View {
             case .Friends:
                 VStack{
                     ScrollView(.vertical){
-                    VStack (spacing: 10) {
-                        
-                        Text("Friend Request:")
-                            .frame(maxWidth: .infinity, alignment: .leading)                     .font(.title3)
-                            .fontWeight(.regular)
-                            .padding(.leading)
-                            .foregroundColor(Color("Color"))
-//                        Rectangle()
-//                            .fill(Color("Color"))
-//                            .frame(height:1 )
-//                            .padding(.horizontal,20)
-                        
-                       // *** friend rec ***
-                        
-                        HStack {
-                            Image("profilePic")
-                                .resizable()
-                                .clipShape(Circle())
-                                .frame(width: 65, height: 65)
-                                .cornerRadius(8)
-                            VStack(alignment: .leading) {
-                                Text("Lubosek")
-                                    .font(.title3)
-                                    .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
-                                Text("@Lubosek18")
-                                    .font(.callout)
-                                    .foregroundColor(.gray)
-                            }
-                            Spacer()
-                            Button("Reject") {}
-                                .buttonStyle(.bordered)
+                        VStack (spacing: 10) {
+                            
+                            Text("Friend Request:")
+                                .frame(maxWidth: .infinity, alignment: .leading)                     .font(.title3)
+                                .fontWeight(.regular)
+                                .padding(.leading)
                                 .foregroundColor(Color("Color"))
                             
-                            //  .background(Color.gray)
                             
+                            // *** friend rec ***
                             
-                            Button("Accept") {}
-                                .buttonStyle(.borderedProminent)
-                            //  .background(Color("Color"))
-                                .foregroundColor(Color(.white))
-                        }
-                       
-                      
-                        .padding(25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color("Color"), lineWidth: 1)
-                                .frame(width:365,height:90)
-                               
-                        )
-            
-                        
-                        
-                        Text("My Friends:")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .font(.title3)
-                            .fontWeight(.regular)
-                            .foregroundColor(Color("Color"))
-//                        Rectangle()
-//                            .fill(Color("Color"))
-//                            .frame(height:1 )
-//                            .padding(.horizontal,20)
-
-                        HStack{
-                            
-                            HStack{
-                                Image(systemName: "magnifyingglass")
-                                TextField("Search", text: $searchText)
+                            HStack {
+                                Image("profilePic")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 65, height: 65)
+                                    .cornerRadius(8)
+                                VStack(alignment: .leading) {
+                                    Text("Lubosek")
+                                        .font(.title3)
+                                        .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
+                                    Text("@Lubosek18")
+                                        .font(.callout)
+                                        .foregroundColor(.gray)
+                                }
+                                Spacer()
+                                Button("Reject") {}
+                                    .buttonStyle(.bordered)
+                                    .foregroundColor(Color("Color"))
+                                
+                                //  .background(Color.gray)
+                                
+                                
+                                Button("Accept") {}
+                                    .buttonStyle(.borderedProminent)
+                                //  .background(Color("Color"))
+                                    .foregroundColor(Color(.white))
                             }
-                            .padding(5)
-                            .background(
-                                RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(.white))
-                                    .shadow(radius: 2)
+                            
+                            
+                            .padding(25)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color("Color"), lineWidth: 1)
+                                    .frame(width:365,height:90)
+                                
                             )
                             
-                            //add friend button
-                            NavigationLink(destination: addFriend(friendToadd: friendList), label:{
-                                Image(systemName: "person.crop.circle.badge.plus")
-                                    .bold()
-                                    .font(.system(size: 25))
-                                
-                            })
                             
-                        }
-                        .padding()
-                    }
-                    ScrollView(.vertical){
-                        LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(friendList) { friend in friendRow1(eachFriend: friend)
+                            
+                            Text("My Friends:")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .font(.title3)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("Color"))
+                            
+                            
+                            HStack{
+                                
+                                HStack{
+                                    Image(systemName: "magnifyingglass")
+                                    TextField("Search", text: $searchText)
+                                }
+                                .padding(5)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .fill(Color(.white))
+                                        .shadow(radius: 2)
+                                )
+                                
+                                //add friend button
+                                NavigationLink(destination: addFriend(friendToadd: friendList), label:{
+                                    Image(systemName: "person.crop.circle.badge.plus")
+                                        .bold()
+                                        .font(.system(size: 25))
+                                    
+                                })
+                                
                             }
+                            .padding()
+                        }
+                        ScrollView(.vertical){
+                            LazyVGrid(columns: columns, spacing: 10) {
+                                ForEach(friendList) { friend in friendRow1(eachFriend: friend)
+                                }
                             }
                         }
                     }
                 }
-           
+                
             }
         }
         
     }
 }
 
-    
-    
-    
-    struct friendRow1: View {
-        var eachFriend: friend
-        var body: some View{
-            NavigationLink(destination: friendProfile()) {
+
+
+
+struct friendRow1: View {
+    var eachFriend: friend
+    var body: some View{
+        NavigationLink(destination: friendProfile()) {
             HStack{
                 VStack(spacing:1){
                     Image(eachFriend.image)
@@ -261,68 +255,68 @@ struct profilePage: View {
                     
                     
                 }
-                }
-                
             }
+            
         }
     }
-    
-    struct RemainderRow: View {
-        @State var listOfReactionsIsShowing = false
-        var eachRemainder: Reminder
-        var body: some View{
-            
-            HStack(alignment:.top){
-                Image(eachRemainder.image)
-                    .resizable()
-                    .clipShape(Circle())
-                    .frame(width: 50,height:50)
-                
-                
-                VStack(alignment:.leading){
-                    HStack{
-                        Text(eachRemainder.name)
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
-                            .padding(10)
-                        Spacer()
-                        Text(Date().addingTimeInterval(600), style: .time)
-                      //  Text(eachRemainder.time)
-                            .font(.caption)
-                            .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
-                    }
-                    .padding(.top,5)
-                    
-                    Text(eachRemainder.content)
-                        .font(.headline)
-                        .fontWeight(.regular)
-                        .lineLimit(nil)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading, 10)
-                    
-                    HStack{
-                        Text("♥️")
-                        Text(eachRemainder.numOfReact > 0 ? "\(eachRemainder.numOfReact)" : "")
-                    }.onTapGesture(perform: {
-                        listOfReactionsIsShowing = false
+}
 
-                    })
-                    .font(.system(size: 12))
-                    .padding(4)
-                    .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274, opacity: 25.0))
-                    .background(Color(hue: 0.942, saturation: 0.095, brightness: 0.878))
-                    .cornerRadius(5)
-                    .padding(.leading,200)
-                 
+struct RemainderRow: View {
+    @State var listOfReactionsIsShowing = false
+    var eachRemainder: Reminder
+    var body: some View{
+        
+        HStack(alignment:.top){
+            Image(eachRemainder.image)
+                .resizable()
+                .clipShape(Circle())
+                .frame(width: 50,height:50)
+            
+            
+            VStack(alignment:.leading){
+                HStack{
+                    Text(eachRemainder.name)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
+                        .padding(10)
+                    Spacer()
+                    Text(Date().addingTimeInterval(600), style: .time)
+                    //  Text(eachRemainder.time)
+                        .font(.caption)
+                        .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                 }
+                .padding(.top,5)
+                
+                Text(eachRemainder.content)
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .lineLimit(nil)
+                    .multilineTextAlignment(.leading)
+                    .padding(.leading, 10)
+                
+                HStack{
+                    Text("♥️")
+                    Text(eachRemainder.numOfReact > 0 ? "\(eachRemainder.numOfReact)" : "")
+                }.onTapGesture(perform: {
+                    listOfReactionsIsShowing = false
+                    
+                })
+                .font(.system(size: 12))
+                .padding(4)
+                .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274, opacity: 25.0))
+                .background(Color(hue: 0.942, saturation: 0.095, brightness: 0.878))
+                .cornerRadius(5)
+                .padding(.leading,200)
+                
             }
-            
-            
-            
         }
         
+        
+        
     }
+    
+}
 
 
 

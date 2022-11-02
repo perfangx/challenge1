@@ -22,16 +22,16 @@ struct forgetPass: View {
                 
                 VStack(spacing:15) {
                     
-//                    Label("lock", systemImage: "lock.circle")
+                    //                    Label("lock", systemImage: "lock.circle")
                     Image(systemName: "lock.circle")
                         .foregroundColor(Color("Color"))
                         .font(.system(size: 100))
                     Text("Trouble logging in?")
                         .foregroundColor(Color("Color"))
                         .font(.system(size: 24))
-                        
                     
-
+                    
+                    
                     Text("Enter your username or email and we’ll send you a link to get back into your account.")
                         .frame(width: 307 , height: 44)
                         .multilineTextAlignment(.center)
@@ -39,30 +39,30 @@ struct forgetPass: View {
                         .foregroundColor(.gray)
                         .padding()
                     
+                    
+                    
+                    TextField("username or email" , text: $email)
+                        .padding()
+                        .frame(width:307,height:44)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color("Color"), lineWidth: 1))
+                    
+                    
+                    Button {
+                        print("email: \(email)")
+                        
+                    } label: {
+                        Text("Reset password")
+                            .frame(width:307 , height:44 )
+                            .foregroundColor(.white)
+                            .background(Color("Color"))
+                            .cornerRadius(8)
                         
                         
-                        TextField("username or email" , text: $email)
-                            .padding()
-                            .frame(width:307,height:44)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color("Color"), lineWidth: 1))
-                        
-                        
-                        Button {
-                            print("email: \(email)")
-                            
-                        } label: {
-                            Text("Reset password")
-                                .frame(width:307 , height:44 )
-                                .foregroundColor(.white)
-                                .background(Color("Color"))
-                                .cornerRadius(8)
-                            
-                            
-                        }
-                        
-                   
+                    }
+                    
+                    
                     
                     Spacer()
                     

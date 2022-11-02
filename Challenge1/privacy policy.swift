@@ -21,26 +21,26 @@ struct privacy_policy: View {
             NavigationView {
                 VStack (spacing:1) {
                     
-                        
-                        Text("It’s really hard to make everyone happy with a Privacy Policy , Most people who use Scratch want something short and easy to understand.")
-                            .font(.callout)
-                            .padding()
-                        
-                        Text("at least know this:                                                      1. Scratch is a public platform.                                 2. We collect some data about you.                        3. We use your data to make Scratch better.         4. You can control your experience ")
-                            .font(.callout)
-                            .padding()
-                        
-//                        Text("Fore more informations visit:")
-//                            .font(.callout)
-//                            .multilineTextAlignment(.center)
-//                            .padding()
-                        
-                        Text("( https://scratch.com/en/privacy)")
-                            .font(.body)
-                            .fontWeight(.heavy)
-                         
-                    }
-            
+                    
+                    Text("It’s really hard to make everyone happy with a Privacy Policy , Most people who use Scratch want something short and easy to understand.")
+                        .font(.callout)
+                        .padding()
+                    
+                    Text("at least know this:                                                      1. Scratch is a public platform.                                 2. We collect some data about you.                        3. We use your data to make Scratch better.         4. You can control your experience ")
+                        .font(.callout)
+                        .padding()
+                    
+                    //                        Text("Fore more informations visit:")
+                    //                            .font(.callout)
+                    //                            .multilineTextAlignment(.center)
+                    //                            .padding()
+                    
+                    Text("( https://scratch.com/en/privacy)")
+                        .font(.body)
+                        .fontWeight(.heavy)
+                    
+                }
+                
                 .navigationTitle("Our Privacy Policys")
                 .font(.callout)
                 
@@ -49,7 +49,7 @@ struct privacy_policy: View {
         }
     }
 }
-        
+
 struct privacy_policy_Previews: PreviewProvider {
     static var previews: some View {
         privacy_policy()

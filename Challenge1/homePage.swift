@@ -90,7 +90,7 @@ struct homePage: View {
                             //sending notification
                             let content = UNMutableNotificationContent()
                             content.title = "Scratch!"
-                            content.subtitle = "Nahia just \(Reminderlist[0].content), dont forget to do that too"
+                            content.subtitle = "\(Reminderlist[0].name) just said: \(Reminderlist[0].content), dont forget to do that too"
                             content.sound = UNNotificationSound.default
                             
                             // show this notification five seconds from now

@@ -17,7 +17,7 @@ struct addFriend: View {
                     .fill(Color.clear)
                     .frame(height: 10)
                     .background(LinearGradient(colors: [.purple.opacity(0.2), .blue.opacity(0.3)],
-
+                                               
                                                startPoint: .topLeading, endPoint: .bottomTrailing)
                     )
                 

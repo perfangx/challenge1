@@ -111,6 +111,7 @@ struct loginPage: View {
     
     func setTheValues ()
     {
+        currentUser.name = Username
         currentUser.userName = Username
         currentUser.password = Password
         
