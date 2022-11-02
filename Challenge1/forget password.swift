@@ -79,9 +79,6 @@ struct forget_password: View {
                                 
                             }
                             
-                            .navigationBarHidden(true)
-                            
-                            
                         }
                         
                         

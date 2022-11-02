@@ -70,8 +70,7 @@ struct forgetPass: View {
                     
                 }
                 
-                .navigationTitle("Reset Password")
-                .navigationBarHidden(true)
+                
                 Color(.white)
             }
         }
