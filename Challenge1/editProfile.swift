@@ -41,15 +41,17 @@ struct editProfile: View {
                 
                 VStack(alignment: .center,spacing: 10){
                     Text(CurrentUser.name)
-                        .font(.title)
+                        .font(.title2)
+                        .font(.custom("helvicta", fixedSize: 20))
                     
                     Text("@"+CurrentUser.userName)
+                        .font(.custom("helvicta", fixedSize: 16))
                     Text(CurrentUser.bio)
-                    
+                        .font(.custom("helvicta", fixedSize: 16))
                     
                     //edit profile form
                     Form{
-                        Section(header: Text("Edit Profile")){
+                        Section(header: Text("Edit Profile").bold().foregroundColor(Color("Color"))){
                             TextField("Name", text: $name)
                             DatePicker("Birthdate", selection: $birthdate, displayedComponents: .date)
                             TextField("Bio", text: $bio)
@@ -64,7 +66,7 @@ struct editProfile: View {
                         .foregroundColor(.white)
                         .background(Color("Color"))
                         .cornerRadius(8)
-                        
+                        .fontWeight(.semibold)
                     }
                     .scrollContentBackground(.hidden) //to remove grey bg
                 }

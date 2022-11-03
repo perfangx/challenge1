@@ -53,7 +53,7 @@ struct forget_password: View {
                                             RoundedRectangle(cornerRadius: 8)
                                                 .stroke(Color("Color"), lineWidth: 1))
                                     
-                                    SecureField("new Password", text:$newpassword )
+                                    SecureField("New Password", text:$newpassword )
                                     
                                         .padding()
                                         .frame(width:307,height:44)
@@ -76,7 +76,7 @@ struct forget_password: View {
                                 .foregroundColor(.white)
                                 .background(Color("Color"))
                                 .cornerRadius(8)
-                                
+                                .fontWeight(.semibold)
                             }
                             
                         }

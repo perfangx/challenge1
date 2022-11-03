@@ -38,7 +38,7 @@ struct loginPage: View {
                     Text("Log In")
                         .foregroundColor(Color("Color"))
                         .font(.system(size: 36))
-                   
+                        
                     
                     TextField("Username" , text: $Username)
                     
@@ -68,7 +68,7 @@ struct loginPage: View {
                     .foregroundColor(.white)
                     .background(Color("Color"))
                     .cornerRadius(8)
-                    
+                    .fontWeight(.semibold)
                     
                     
                     

@@ -56,13 +56,18 @@ struct profilePage: View {
                     
                     Text(CurrentUser.name)
                         .font(.custom("Helvetica", fixedSize: 20 ))
+                        .bold()
                         .foregroundColor(Color(red: 0.6705882352941176, green: 0.4235294117647059, blue: 0.5098039215686274))
                     
                     Text("@"+CurrentUser.userName)
                         .foregroundColor(Color(.black))
+                        .font(.headline)
+                        .fontWeight(.regular)
                     
                     Text(CurrentUser.bio)
                         .foregroundColor(Color(.black))
+                        .font(.headline)
+                        .fontWeight(.regular)
                     
                     
                     VStack{
@@ -124,7 +129,7 @@ struct profilePage: View {
                     //                        .padding(.horizontal,20)
                     Spacer()
                     
-                    List(Reminderlist.filter { $0.name.contains("Indria") })
+                    List(Reminderlist.filter { $0.name.contains("Nahia") })
                     {Reminder in RemainderRow(eachRemainder: Reminder).swipeActions{
                         Button(role: .destructive){
                         } label: {
@@ -151,7 +156,7 @@ struct profilePage: View {
                             // *** friend rec ***
                             
                             HStack {
-                                Image("profilePic")
+                                Image("alexa")
                                     .resizable()
                                     .clipShape(Circle())
                                     .frame(width: 65, height: 65)
@@ -214,7 +219,7 @@ struct profilePage: View {
                                 NavigationLink(destination: addFriend(friendToadd: friendList), label:{
                                     Image(systemName: "person.crop.circle.badge.plus")
                                         .bold()
-                                        .font(.system(size: 25))
+                                        .font(.system(size: 30))
                                     
                                 })
                                 

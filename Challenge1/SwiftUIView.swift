@@ -43,9 +43,13 @@ struct SwiftUIView: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color.pink)
                 }
-                
+            
+               
             }
+            .padding(20)
+            
         }
+        
         
     }
 }

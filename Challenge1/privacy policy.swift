@@ -30,10 +30,6 @@ struct privacy_policy: View {
                         .font(.callout)
                         .padding()
                     
-                    //                        Text("Fore more informations visit:")
-                    //                            .font(.callout)
-                    //                            .multilineTextAlignment(.center)
-                    //                            .padding()
                     
                     Text("( https://scratch.com/en/privacy)")
                         .font(.body)
@@ -43,9 +39,10 @@ struct privacy_policy: View {
                 
                 .navigationTitle("Our Privacy Policys")
                 .font(.callout)
-                
+
                 .accentColor(.black)
             }
+            .padding()
         }
     }
 }

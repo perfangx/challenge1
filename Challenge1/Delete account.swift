@@ -28,6 +28,7 @@ struct Delete_account: View {
                             .foregroundColor(Color("Color"))
                             .font(.system(size: 24))
                             .padding()
+                            .fontWeight(.semibold)
                         Text("Are you sure you want to Delete you account?")
                             .foregroundColor(Color("Color"))
                             .font(.system(size: 18))
@@ -44,7 +45,7 @@ struct Delete_account: View {
                             .opacity(0.9)
                             .cornerRadius(10)
                             .border(Color(.clear))
-                            .font(.system(size: 16, weight: .bold))
+                            .font(.system(size: 16, weight: .semibold))
                             .padding()
                             
                             Button("No") {
@@ -56,7 +57,7 @@ struct Delete_account: View {
                             .opacity(0.9)
                             .cornerRadius(10)
                             .border(Color(.clear))
-                            .font(.system(size: 16, weight: .bold))
+                            .font(.system(size: 16, weight: .semibold))
                             .padding()
                         }
                         Spacer()

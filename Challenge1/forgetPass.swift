@@ -28,7 +28,7 @@ struct forgetPass: View {
                         .font(.system(size: 100))
                     Text("Trouble logging in?")
                         .foregroundColor(Color("Color"))
-                        .font(.system(size: 24))
+                        .font(.system(size: 36))
                     
                     
                     
@@ -41,7 +41,7 @@ struct forgetPass: View {
                     
                     
                     
-                    TextField("username or email" , text: $email)
+                    TextField("Username or Email" , text: $email)
                         .padding()
                         .frame(width:307,height:44)
                         .overlay(
@@ -50,7 +50,7 @@ struct forgetPass: View {
                     
                     
                     Button {
-                        print("email: \(email)")
+                        print("Email: \(email)")
                         
                     } label: {
                         Text("Reset password")
@@ -58,7 +58,7 @@ struct forgetPass: View {
                             .foregroundColor(.white)
                             .background(Color("Color"))
                             .cornerRadius(8)
-                        
+                            .fontWeight(.semibold)
                         
                     }
                     

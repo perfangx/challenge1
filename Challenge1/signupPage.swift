@@ -44,21 +44,21 @@ struct signupPage: View {
                         .font(.system(size: 36))
                         .padding()
                     
-                    TextField("name" , text: $Name)
+                    TextField("Name" , text: $Name)
                         .padding()
                         .frame(width:307,height:44)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Color"), lineWidth: 1))
                     
-                    TextField("username" , text: $Username)
+                    TextField("Username" , text: $Username)
                         .padding()
                         .frame(width:307,height:44)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Color"), lineWidth: 1))
                     
-                    TextField("email" , text: $email)
+                    TextField("Email" , text: $email)
                         .padding()
                         .frame(width:307,height:44)
                         .overlay(
@@ -72,7 +72,7 @@ struct signupPage: View {
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Color"), lineWidth: 1))
                     
-                    SecureField("confirm password" , text: $confirmPassword)
+                    SecureField("Confirm password" , text: $confirmPassword)
                         .padding()
                         .frame(width:307,height:44)
                         .overlay(
@@ -87,6 +87,7 @@ struct signupPage: View {
                     .foregroundColor(.white)
                     .background(Color("Color"))
                     .cornerRadius(8)
+                    .fontWeight(.semibold)
                     .fullScreenCover(isPresented: $isPresentedFullScreenCover) {
                         // homePage()
                         homePage(CurrentUser: currentUser)

@@ -37,7 +37,7 @@ struct homePage: View {
                         .foregroundColor(Color("Color"))
                         .font(.system(size: 55))
                         .frame(maxWidth: .infinity,alignment: .center)
-                        .padding(10)
+                        .padding(25)
                         .background(Color(.white))
                         .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 0)
                         .onTapGesture {
@@ -108,6 +108,7 @@ struct homePage: View {
                         .buttonStyle(.borderedProminent)
                         .padding( .top, 120)
                         .padding( .leading, 245)
+                        .fontWeight(.semibold)
                     }
                     .frame(maxWidth:.infinity, maxHeight: .infinity)
                     .background(Color.white)

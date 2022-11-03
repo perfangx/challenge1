@@ -49,7 +49,7 @@ struct settingsPage: View {
                         
                         NavigationLink ("Change Password",destination: forget_password(text: "forget password"))
                         
-                        NavigationLink("Blocked" ,destination: Text("People you already bloked"))
+                        NavigationLink("Blocked" ,destination: Text("You haven't blocked anyone"))
                         
                         
                         NavigationLink(destination: Delete_account()) {

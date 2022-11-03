@@ -46,7 +46,7 @@ struct startPage: View {
                         Text("Log in")
                             .foregroundColor(Color("Color"))
                             .padding()
-                        
+                            .fontWeight(.semibold)
                         
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
@@ -64,7 +64,7 @@ struct startPage: View {
                             .background(Color("Color"))
                             .background(.white)
                             .cornerRadius(8)
-                        
+                            .fontWeight(.semibold)
                     })
                     HStack(spacing:15){
                         
@@ -91,8 +91,8 @@ struct startPage: View {
                     .background(Color(.lightGray))
                     .background(.white)
                     .cornerRadius(8)
-                    
-                    
+                    .padding(.bottom)
+                    .fontWeight(.semibold)
                     HStack{
                         
                         Text("By signing up you agree to our")
@@ -106,8 +106,9 @@ struct startPage: View {
                                 .foregroundColor(.blue)
                             
                         })
-                        
+                      
                     }
+                    
                     
                     //**** END PAGE CONTENT HERE*****
                 }
